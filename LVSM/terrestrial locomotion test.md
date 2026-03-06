@@ -17,11 +17,12 @@ The unified stability metric \( S \) for any land-based transportation system (b
 \( S > 0 \) → Frame C locked (stable)  
 \( S \leq 0 \) → Frame Separation Event (crash / loss of control / derailment / slip / stumble)
 
-### Quick Degeneration Rules
-- **Bike / Motorcycle**: legged_mode = tracked_mode = railed_mode = 0, δ = 0, K_roll = 0, K_susp = 0 → reduces to the original clean GitHub bike equation
-- **Street / Off-road Car**: θ = 0 (no lean), δ active, legged_mode = tracked_mode = railed_mode = 0 → Ackermann steering + roll/load transfer
-- **Tank / Tracked**: tracked_mode = 1, δ = differential track speed, θ = 0, μ → soil shear
-- **Train**: railed_mode = 1, δ = 0, y_flange → flange clearance, gauge = rail spacing
+### Degeneration Rules (Quick Reference)
+- **Bike / Motorcycle**: legged_mode = tracked_mode = railed_mode = 0, δ = 0, K_roll = 0, K_susp = 0  
+- **Street / Off-road Car**: θ = 0, δ active, legged_mode = tracked_mode = railed_mode = 0  
+- **Tank / Tracked**: tracked_mode = 1, δ = differential track speed, θ = 0, μ → soil shear  
+- **Train**: railed_mode = 1, δ = 0, y_flange → flange clearance  
 - **Insect / Legged**: legged_mode = 1, other modes = 0, f_leg = stride frequency
 
-All terms are dimensionally homogeneous (S is dimensionless).
+All terms are dimensionally homogeneous (S is dimensionless).  
+The equation reduces to the original clean GitHub bike form when wheeled-specific terms are zeroed.
