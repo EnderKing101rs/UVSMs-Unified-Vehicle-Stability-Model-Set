@@ -2,7 +2,7 @@ LVSM Glossary: Land Vehicle Stability Model
 ​The LVSM calculates the Stability Index (S) for land-based systems by weighing the machine's restoring forces against environmental, human, and structural penalties.
 ​The Master Equation (Land)
 
-$$S_{Land} = \underbrace{\left[ \frac{v^2 $$S_{Land} = \underbrace{\left[ \frac{v^2 \sin(\theta + \beta)}{g R_{turn}} + \frac{I_w \omega \Omega}{mg h_H} \right]}_{\text{Restoring}} + \underbrace{\left[ \eta \sqrt{\mu^2 - (a/g)^2} \right]}_{\text{Buffer}} - \underbrace{\left[ \sin\theta + \frac{F_W}{mg} \right]}_{\text{Toppling}} - \underbrace{k \left[ \frac{\Delta x + \tau \dot{\Delta x}}{h_H} \right]}_{\text{Penalty}} - \underbrace{\left[ \frac{K_{flex} \delta^2}{2mg h_H} \right]}_{\text{Shock}}$$
+$$S_{Land} = \underbrace{\left[ \frac{v^2 \sin(\theta + \beta)}{g R_{turn}} + \frac{I_w \omega \Omega}{mg h_H} \right]}_{\text{Restoring}} + \underbrace{\left[ \eta \sqrt{\mu^2 - (a/g)^2} \right]}_{\text{Buffer}} - \underbrace{\left[ \sin\theta + \frac{F_W}{mg} \right]}_{\text{Toppling}} - \underbrace{k \left[ \frac{\Delta x + \tau \dot{\Delta x}}{h_H} \right]}_{\text{Penalty}} - \underbrace{\left[ \frac{K_{flex} \delta^2}{2mg h_H} \right]}_{\text{Shock}}$$
 
 Variable Definitions
 1. Kinetic Restoring (The Machine's Will to Live)
