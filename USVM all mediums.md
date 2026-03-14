@@ -6,6 +6,7 @@ S \le 0: A Frame Separation Event is triggered (a crash, stall, capsize, or dera
 The equation functions like a financial ledger of physics. The first two brackets are your Stability Credit (energy and grip keeping you upright). The final four brackets are your Stability Debt (environmental and mechanical forces trying to tip you). If Debt > Credit, the system fails.
 2. The Master Equation
 Copy the block below for your GitHub Markdown:
+
 $$S_{Uni} = \left[ \Lambda_L \left( \frac{v^{2} \sin(\theta + \beta)}{g R_{turn}} \right) + \Lambda_A \left( \frac{L \cos\phi}{mg} \right) + \Lambda_F \left( \frac{\overline{GM} \sin\phi}{B} \right) + \frac{\Gamma}{R_{w}^{2}} \right] + \left[ \Lambda_L \left( \eta_L \sqrt{\mu^{2} - \left( \frac{a}{g} \right)^{2}} \cdot \frac{F_{N} + F_{DF}}{mg} \right) + \Lambda_A (\eta_A) + \Lambda_F (\eta_F) \right] - \left[ \sin\theta \left(1 + \frac{y_{cp}}{h_{CoM}}\right) + \frac{F_{W}}{mg} \right] - k_{eff}(a) \left[ \frac{\Delta x_{GH} + \tau \Delta \dot{x}}{h_{H}} \right] - \left[ \frac{K_{flex} \delta^{2} + K_{susp} \delta_{susp}^{2}}{2mg h_H} \right] - \begin{bmatrix} K_{leg} \left(\frac{f_{leg} - f_{opt}}{f_{opt}}\right)^{2} \\ K_{shear} (R_{slip})^{2} \\ K_{flange} \left(\frac{y_{flange}}{w_{gauge}}\right)^{2} \\ 0 \end{bmatrix}$$
 
 3. The Phase Faders (\Lambda): Medium Transitions
