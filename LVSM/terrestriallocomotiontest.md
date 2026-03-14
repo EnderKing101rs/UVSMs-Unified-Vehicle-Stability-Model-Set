@@ -3,7 +3,7 @@
 ### **Overview: The "Physics Engine" Logic Gate**
 The Unified Vehicle Stability Model Set (UVSMs) treats reality as a recursive physics engine. It provides a universal, mathematically rigorous logic gate ($S$) that defines the exact threshold of frame cohesion (stability) and frame separation (crashing, stalling, capsizing, or derailing) for any dynamic system. 
 
-$$S > 0 \rightarrow \text{Frame Cohesion (Stable)}$$
+
 $$S \leq 0 \rightarrow \text{Frame Separation Event (Failure)}$$
 
 ### **The Master Equation**
@@ -16,8 +16,7 @@ S_{Uni} = &\underbrace{\left[ \Lambda_L \left( \frac{v^{2} \sin(\theta + \beta)}
 &- \underbrace{\left[ \sin\theta \left(1 + \frac{y_{cp}}{h_{CoM}}\right) + \frac{F_{W}}{mg} \right]}_{\text{Universal Toppling}} \\
 &- \underbrace{k_{eff}(a) \left[ \frac{\Delta x_{GH} + \tau \Delta \dot{x}}{h_{H}} \right]}_{\text{System Penalty}} - \underbrace{\left[ \frac{K_{flex} \delta^{2} + K_{susp} \delta_{susp}^{2}}{2mg h_H} \right]}_{\text{Universal Shock}} \\
 &- \underbrace{\left[ \begin{matrix} \text{legged: } K_{leg} \left(\frac{f_{leg} - f_{opt}}{f_{opt}}\right)^{2} \\ \text{tracked: } K_{shear} (R_{slip})^{2} \\ \text{railed: } K_{flange} \left(\frac{y_{flange}}{w_{gauge}}\right)^{2} \\ \text{wheeled: } 0 \end{matrix} \right]}_{\text{Locomotion Penalty}}
-\end{aligned}
-$$
+\end{aligned}$$
 
 ---
 
