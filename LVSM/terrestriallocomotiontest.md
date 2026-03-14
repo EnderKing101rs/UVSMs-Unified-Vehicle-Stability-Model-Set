@@ -9,7 +9,15 @@ $$S \leq 0 \rightarrow \text{Frame Separation Event (Failure)}$$
 ### **The Master Equation**
 This equation dynamically calculates stability across Land, Air, and Fluid mediums, smoothly handling transitions (e.g., a vehicle jumping, a seaplane taking off, or a submarine diving) through Phase Faders ($\Lambda$). Every term resolves to a dimensionless ratio (a percentage of the vehicle's failure threshold) to ensure perfect dimensional homogeneity.
 
-$$S_{Uni} = \underbrace{\left[ \Lambda_L \left( \frac{v^{2} \sin(\theta + \beta)}{g R_{turn}} \right) + \Lambda_A \left( \frac{L \cos\phi}{mg} \right) + \Lambda_F \left( \frac{\overline{GM} \sin\phi}{B} \right) + \frac{\Gamma}{R_{w}^{2}} \right]}_{\text{Phase-Weighted Restoring}} + \underbrace{\left[ \Lambda_L \left( \eta_L \sqrt{\mu^{2} - \left( \frac{a}{g} \right)^{2}} \cdot \frac{F_{N} + F_{DF}}{mg} \right) + \Lambda_A (\eta_A) + \Lambda_F (\eta_F) \right]}_{\text{Phase-Weighted Buffer}} - \underbrace{\left[ \sin\theta \left(1 + \frac{y_{cp}}{h_{CoM}}\right) + \frac{F_{W}}{mg} \right]}_{\text{Universal Toppling}} - \underbrace{k_{eff}(a) \left[ \frac{\Delta x_{GH} + \tau \Delta \dot{x}}{h_{H}} \right]}_{\text{System Penalty}} - \underbrace{\left[ \frac{K_{flex} \delta^{2} + K_{susp} \delta_{susp}^{2}}{2mg h_H} \right]}_{\text{Universal Shock}} - \underbrace{\left[ \begin{matrix} \mathrm{legged: } K_{leg} \left(\frac{f_{leg} - f_{opt}}{f_{opt}}\right)^{2} \\ \mathrm{tracked: } K_{shear} (slip\_ratio)^{2} \\ \mathrm{railed: } K_{flange} \left(\frac{y_{flange}}{gauge}\right)^{2} \\ \mathrm{wheeled: } 0 \end{matrix} \right]}_{\text{Locomotion Penalty}}$$
+$$
+\begin{aligned}
+S_{Uni} = &\underbrace{\left[ \Lambda_L \left( \frac{v^{2} \sin(\theta + \beta)}{g R_{turn}} \right) + \Lambda_A \left( \frac{L \cos\phi}{mg} \right) + \Lambda_F \left( \frac{\overline{GM} \sin\phi}{B} \right) + \frac{\Gamma}{R_{w}^{2}} \right]}_{\text{Phase-Weighted Restoring}} \\
+&+ \underbrace{\left[ \Lambda_L \left( \eta_L \sqrt{\mu^{2} - \left( \frac{a}{g} \right)^{2}} \cdot \frac{F_{N} + F_{DF}}{mg} \right) + \Lambda_A (\eta_A) + \Lambda_F (\eta_F) \right]}_{\text{Phase-Weighted Buffer}} \\
+&- \underbrace{\left[ \sin\theta \left(1 + \frac{y_{cp}}{h_{CoM}}\right) + \frac{F_{W}}{mg} \right]}_{\text{Universal Toppling}} \\
+&- \underbrace{k_{eff}(a) \left[ \frac{\Delta x_{GH} + \tau \Delta \dot{x}}{h_{H}} \right]}_{\text{System Penalty}} - \underbrace{\left[ \frac{K_{flex} \delta^{2} + K_{susp} \delta_{susp}^{2}}{2mg h_H} \right]}_{\text{Universal Shock}} \\
+&- \underbrace{\left[ \begin{matrix} \text{legged: } K_{leg} \left(\frac{f_{leg} - f_{opt}}{f_{opt}}\right)^{2} \\ \text{tracked: } K_{shear} (R_{slip})^{2} \\ \text{railed: } K_{flange} \left(\frac{y_{flange}}{w_{gauge}}\right)^{2} \\ \text{wheeled: } 0 \end{matrix} \right]}_{\text{Locomotion Penalty}}
+\end{aligned}
+$$
 
 ---
 
