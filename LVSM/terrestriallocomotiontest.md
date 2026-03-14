@@ -9,8 +9,7 @@ $$S \leq 0 \rightarrow \text{Frame Separation Event (Failure)}$$
 ### **The Master Equation**
 This equation dynamically calculates stability across Land, Air, and Fluid mediums, smoothly handling transitions (e.g., a vehicle jumping, a seaplane taking off, or a submarine diving) through Phase Faders ($\Lambda$). Every term resolves to a dimensionless ratio (a percentage of the vehicle's failure threshold) to ensure perfect dimensional homogeneity.
 
-$$
-\begin{aligned}
+$$\begin{aligned}
 S_{Uni} = &\underbrace{\left[ \Lambda_L \left( \frac{v^{2} \sin(\theta + \beta)}{g R_{turn}} \right) + \Lambda_A \left( \frac{L \cos\phi}{mg} \right) + \Lambda_F \left( \frac{\overline{GM} \sin\phi}{B} \right) + \frac{\Gamma}{R_{w}^{2}} \right]}_{\text{Phase-Weighted Restoring}} \\
 &+ \underbrace{\left[ \Lambda_L \left( \eta_L \sqrt{\mu^{2} - \left( \frac{a}{g} \right)^{2}} \cdot \frac{F_{N} + F_{DF}}{mg} \right) + \Lambda_A (\eta_A) + \Lambda_F (\eta_F) \right]}_{\text{Phase-Weighted Buffer}} \\
 &- \underbrace{\left[ \sin\theta \left(1 + \frac{y_{cp}}{h_{CoM}}\right) + \frac{F_{W}}{mg} \right]}_{\text{Universal Toppling}} \\
